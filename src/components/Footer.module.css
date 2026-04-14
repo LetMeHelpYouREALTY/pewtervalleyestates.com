@@ -96,7 +96,7 @@
 
 .footerGrid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(360px, 2fr) repeat(3, minmax(160px, 1fr));
   gap: 2.5rem;
 }
 
@@ -140,9 +140,13 @@
 
 .footerContact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.footerContact > div {
+  min-width: 0;
 }
 
 .contactLabel {
@@ -155,9 +159,17 @@
 }
 
 .footerContact a {
+  display: inline-block;
   color: #fbbf24;
   text-decoration: none;
   font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.footerContact p {
+  margin: 0;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .socialLinks {
@@ -221,11 +233,11 @@
 
 @media (max-width: 1024px) {
   .footerGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .footerBrand {
-    grid-column: span 2;
+    grid-column: auto;
   }
 }
 
