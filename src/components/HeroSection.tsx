@@ -29,30 +29,29 @@ export function HeroSection() {
               <span className={styles.highlight}>Dr. Jan Duffy</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Expert real estate services for Pewter Valley Estates in Southwest Las Vegas (89183).
-              Specializing in resale homes, market analysis, and investment properties. Located at
-              Pyle Avenue and S Rancho Destino Rd.
+              Local guidance for Pewter Valley Estates and Silverado Ranch (89183): buying, selling,
+              investment strategy, and neighborhood-focused market insight.
             </p>
             <div className={styles.heroStats}>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>50+</span>
-                <span className={styles.statLabel}>Homes Available</span>
+                <span className={styles.statNumber}>89183</span>
+                <span className={styles.statLabel}>Local Zip Focus</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>3-5</span>
-                <span className={styles.statLabel}>Bedrooms</span>
+                <span className={styles.statNumber}>Buyer</span>
+                <span className={styles.statLabel}>Representation</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>2-4</span>
-                <span className={styles.statLabel}>Bathrooms</span>
+                <span className={styles.statNumber}>Seller</span>
+                <span className={styles.statLabel}>Strategy</span>
               </div>
             </div>
             <div className={styles.heroActions}>
               <Link
-                href="/richmond-demo"
+                href="/homes-for-sale"
                 className={`${styles.ctaButton} ${styles.ctaPrimary}`}
                 onClick={() =>
-                  trackEvent("hero_cta_click", { action: "virtual_tour", section: "hero" })
+                  trackEvent("hero_cta_click", { action: "homes_for_sale", section: "hero" })
                 }
               >
                 <svg
@@ -65,13 +64,13 @@ export function HeroSection() {
                   <title>Virtual tour</title>
                   <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M21 12H9" />
                 </svg>
-                Take Virtual Tour
+                Browse Homes
               </Link>
               <Link
-                href="/contact"
+                href="/schedule"
                 className={`${styles.ctaButton} ${styles.ctaSecondary}`}
                 onClick={() =>
-                  trackEvent("hero_cta_click", { action: "schedule_tour", section: "hero" })
+                  trackEvent("hero_cta_click", { action: "schedule_consultation", section: "hero" })
                 }
               >
                 <svg
@@ -84,7 +83,7 @@ export function HeroSection() {
                   <title>Schedule tour</title>
                   <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
                 </svg>
-                Schedule Tour
+                Schedule Consultation
               </Link>
             </div>
           </div>

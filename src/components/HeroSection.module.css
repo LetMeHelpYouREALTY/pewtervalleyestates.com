@@ -1,7 +1,6 @@
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  min-height: clamp(520px, 78vh, 760px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -27,7 +26,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 58, 138, 0.6) 50%, rgba(30, 58, 138, 0.4) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.8) 0%,
+    rgba(30, 58, 138, 0.6) 50%,
+    rgba(30, 58, 138, 0.4) 100%
+  );
 }
 
 .heroContent {
@@ -49,10 +53,11 @@
 .heroText {
   max-width: 600px;
   color: white;
+  padding: 3.5rem 0 3rem;
 }
 
 .heroTitle {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 2.6vw + 1.1rem, 3.2rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
@@ -65,7 +70,7 @@
 }
 
 .heroSubtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.8vw + 0.8rem, 1.2rem);
   line-height: 1.6;
   margin-bottom: 2rem;
   opacity: 0.95;
@@ -75,7 +80,7 @@
 .heroStats {
   display: flex;
   gap: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.7rem;
   flex-wrap: wrap;
 }
 
@@ -85,7 +90,7 @@
 
 .statNumber {
   display: block;
-  font-size: 2rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #fbbf24;
   line-height: 1;
@@ -93,7 +98,7 @@
 
 .statLabel {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   opacity: 0.9;
   margin-top: 0.25rem;
 }
@@ -150,7 +155,7 @@
 
 .scrollIndicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.2rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -183,20 +188,17 @@
 }
 
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2.5rem;
-  }
-
-  .heroSubtitle {
-    font-size: 1.1rem;
+  .heroText {
+    max-width: 100%;
+    padding: 2.5rem 0 2.2rem;
   }
 
   .heroStats {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .statNumber {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
   .heroActions {
@@ -210,11 +212,11 @@
 }
 
 @media (max-width: 480px) {
-  .heroTitle {
-    font-size: 2rem;
+  .heroStats {
+    justify-content: flex-start;
   }
 
-  .heroStats {
-    justify-content: center;
+  .scrollIndicator {
+    display: none;
   }
 }
