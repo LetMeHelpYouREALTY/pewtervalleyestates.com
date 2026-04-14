@@ -6,8 +6,9 @@
 @import "@fontsource/inter";
 
 :root {
-  --font-sans: "Nunito Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-sans:
+    "Nunito Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --font-display: "Playfair Display", "Nunito Sans", serif;
   --font-mono: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -156,4 +157,34 @@ realscout-office-listings {
   box-shadow: var(--shadow-md);
   min-height: 400px;
   display: block;
+}
+
+/* Defensive fallback layer:
+   If route-level CSS chunks fail to load (stale cache/SW), keep the UI readable. */
+main {
+  display: block;
+}
+
+main section {
+  width: 100%;
+}
+
+svg[aria-hidden] {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+}
+
+button,
+input,
+select,
+textarea {
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.7rem;
+  background: var(--color-white);
+}
+
+button {
+  cursor: pointer;
 }
