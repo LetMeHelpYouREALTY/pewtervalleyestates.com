@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/fira-mono";
+@import "@fontsource/inter";
+
+:root {
+  --font-sans: "Nunito Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-display: "Playfair Display", "Nunito Sans", serif;
+  --font-mono: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-navy-900: #071427;
+  --color-navy-800: #0a2540;
+  --color-navy-600: #123d73;
+  --color-indigo-700: #1e3a8a;
+  --color-indigo-600: #1e40af;
+  --color-gold-500: #fbbf24;
+  --color-gold-600: #f59e0b;
+  --color-slate-900: #0f172a;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-white: #ffffff;
+  --color-off-white: #f7f9fc;
+  --color-teal-500: #16b286;
+  --color-teal-600: #0d8a5b;
+
+  --text-color: var(--color-slate-700);
+  --heading-color: var(--color-navy-800);
+  --accent-color: var(--color-gold-500);
+  --accent-color-dark: var(--color-gold-600);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 2px 8px rgba(8, 15, 52, 0.08);
+  --shadow-md: 0 12px 30px rgba(10, 37, 64, 0.12);
+  --shadow-lg: 0 30px 60px rgba(7, 20, 40, 0.18);
+
+  --max-width: 1280px;
+  --content-width: 960px;
+
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  background-color: var(--color-off-white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background-color: var(--color-off-white);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--color-navy-600);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-color-dark);
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--heading-color);
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+realscout-office-listings {
+  --rs-listing-divider-color: rgba(7, 20, 39, 0.08);
+  --rs-primary-color: var(--color-navy-800);
+  --rs-secondary-color: var(--accent-color);
+  --rs-text-color: var(--text-color);
+  --rs-background-color: var(--color-white);
+  --rs-border-color: rgba(7, 20, 39, 0.08);
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  min-height: 400px;
+  display: block;
+}

@@ -1,0 +1,173 @@
+.napDisplay {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.napContent {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.napItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.napIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.napIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.napDetails {
+  flex: 1;
+}
+
+.napLabel {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.napValue {
+  font-size: 1.125rem;
+  color: #1e3a8a;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.napValue a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.napValue a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.napActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.napActionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #1e3a8a;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.napActionButton:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
+}
+
+.napActionButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.napCompact {
+  padding: 1.5rem;
+}
+
+.napCompact .napContent {
+  gap: 1rem;
+}
+
+.napCompact .napIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.napCompact .napIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.napCompact .napValue {
+  font-size: 1rem;
+}
+
+.napInline {
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.napInline .napContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 0;
+}
+
+.napInline .napItem {
+  gap: 0.5rem;
+}
+
+.napInline .napIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.napInline .napIcon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.napInline .napLabel {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.napInline .napValue {
+  display: inline;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .napDisplay {
+    padding: 1.5rem;
+  }
+
+  .napActions {
+    flex-direction: column;
+  }
+
+  .napActionButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

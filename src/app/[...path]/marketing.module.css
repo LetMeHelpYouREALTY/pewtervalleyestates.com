@@ -1,0 +1,59 @@
+.wrap {
+  width: 100%;
+  padding: var(--space-10) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+  color: var(--color-slate-500);
+}
+
+.breadcrumbs a {
+  color: var(--color-indigo-700);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.h1 {
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+  font-weight: 700;
+  color: var(--color-indigo-700);
+  margin: 0 0 var(--space-5);
+}
+
+.p {
+  color: var(--color-slate-700);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0 0 var(--space-4);
+}
+
+.cta {
+  margin-top: var(--space-6);
+  font-weight: 600;
+}
+
+.cta a {
+  color: var(--color-indigo-700);
+  text-decoration: none;
+}
+
+.cta a:hover {
+  text-decoration: underline;
+}

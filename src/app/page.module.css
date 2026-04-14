@@ -1,0 +1,527 @@
+.homepage {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 2.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-indigo-700);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.pathways {
+  padding: var(--space-10) 0;
+  background: var(--color-slate-100);
+}
+
+.buyerSellerSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.pathCard {
+  background: var(--color-white);
+  color: var(--color-indigo-700);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(7, 20, 39, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pathCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pathIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.pathHeading {
+  font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  color: var(--color-indigo-700);
+}
+
+.pathDescription {
+  color: var(--color-slate-500);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.pathBenefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.pathBenefits li {
+  padding: var(--space-2) 0;
+  color: var(--color-slate-700);
+  font-size: 0.95rem;
+}
+
+.pathCtas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ctaPrimary {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-indigo-700);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.25);
+}
+
+.ctaPrimary:hover {
+  background: var(--color-indigo-600);
+  transform: translateY(-2px);
+}
+
+.ctaPhone {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-teal-500);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(22, 178, 134, 0.2);
+}
+
+.ctaPhone:hover {
+  background: var(--color-teal-600);
+  transform: translateY(-2px);
+}
+
+.quickLead {
+  padding: var(--space-10) 0;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+.leadGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.leadFormCard {
+  background: var(--color-slate-100);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-slate-200);
+}
+
+.leadFormCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-indigo-700);
+  margin-bottom: var(--space-2);
+}
+
+.leadFormCard p {
+  color: var(--color-slate-500);
+  margin-bottom: var(--space-4);
+  font-size: 1rem;
+}
+
+.contentSection {
+  padding: var(--space-10) 0;
+  background: var(--color-white);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+
+.contentMain h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-indigo-700);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.contentMain p {
+  color: var(--color-slate-700);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+  font-size: 1.125rem;
+}
+
+.contentSidebar {
+  position: sticky;
+  top: var(--space-6);
+  height: fit-content;
+}
+
+.quickStats {
+  background: var(--color-slate-100);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-slate-200);
+}
+
+.quickStats h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-indigo-700);
+  margin-bottom: var(--space-3);
+}
+
+.quickStats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quickStats li {
+  padding: var(--space-2) 0;
+  color: var(--color-slate-700);
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+.quickStats li:last-child {
+  border-bottom: none;
+}
+
+.quickStats strong {
+  color: var(--color-indigo-700);
+}
+
+.currentPropertyListings {
+  padding: var(--space-10) 0;
+  background: var(--color-white);
+}
+
+.listingsSectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.listingsSectionHeader h2 {
+  font-size: clamp(2rem, 2.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-slate-700);
+  margin-bottom: var(--space-3);
+}
+
+.listingsSubtitle {
+  font-size: 1.125rem;
+  color: var(--color-slate-500);
+  line-height: 1.6;
+}
+
+.listingsCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.listingsCard {
+  background: var(--color-white);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(7, 20, 39, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.listingsCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardIcon {
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-indigo-100);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-indigo-700);
+}
+
+.cardIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.listingsCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-indigo-700);
+  margin-bottom: var(--space-3);
+}
+
+.listingsCard > p {
+  color: var(--color-slate-600);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  font-size: 1rem;
+}
+
+.propertiesFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6) 0;
+  flex: 1;
+}
+
+.propertiesFeatures li {
+  padding: var(--space-2) 0;
+  color: var(--color-slate-700);
+  font-size: 1rem;
+  position: relative;
+  padding-left: var(--space-5);
+}
+
+.propertiesFeatures li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-indigo-700);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.contactInfo {
+  margin: var(--space-4) 0 var(--space-6) 0;
+  flex: 1;
+}
+
+.contactItem {
+  margin-bottom: var(--space-3);
+  color: var(--color-slate-700);
+  font-size: 1rem;
+}
+
+.contactItem strong {
+  color: var(--color-indigo-700);
+  margin-right: var(--space-2);
+}
+
+.contactItem a {
+  color: var(--color-indigo-700);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contactItem a:hover {
+  color: var(--color-indigo-600);
+  text-decoration: underline;
+}
+
+.cardButton {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cardButtonPrimary {
+  background: #dc2626;
+  color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.25);
+}
+
+.cardButtonPrimary:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(220, 38, 38, 0.35);
+}
+
+.cardButtonSecondary {
+  background: var(--color-slate-600);
+  color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(71, 85, 105, 0.25);
+}
+
+.cardButtonSecondary:hover {
+  background: var(--color-slate-700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(71, 85, 105, 0.35);
+}
+
+.services {
+  padding: var(--space-10) 0;
+  background: var(--color-white);
+}
+
+.services h2 {
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-indigo-700);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.servicesSplit {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.servicesColumn {
+  background: var(--color-slate-100);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border-top: 4px solid;
+  box-shadow: var(--shadow-sm);
+}
+
+.buyerServices {
+  border-top-color: var(--color-teal-500);
+}
+
+.sellerServices {
+  border-top-color: var(--color-indigo-700);
+}
+
+.servicesColumn h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-indigo-700);
+  margin-bottom: var(--space-4);
+}
+
+.serviceList {
+  margin-bottom: 2rem;
+}
+
+.serviceItem {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  align-items: flex-start;
+}
+
+.serviceItem .check {
+  color: var(--color-teal-500);
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.serviceItem strong {
+  display: block;
+  color: var(--color-indigo-700);
+  font-size: 1.125rem;
+  margin-bottom: var(--space-1);
+}
+
+.serviceItem p {
+  color: var(--color-slate-500);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.serviceCta {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-indigo-700);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.serviceCta:hover {
+  background: var(--color-indigo-600);
+  transform: translateY(-2px);
+}
+
+.sellerServices .serviceCta {
+  background: var(--color-teal-500);
+}
+
+.sellerServices .serviceCta:hover {
+  background: var(--color-teal-600);
+}
+
+.mapSection {
+  padding: 0;
+}
+
+@media (max-width: 968px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contentSidebar {
+    position: static;
+  }
+
+  .servicesSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .buyerSellerSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .listingsCardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pathCard {
+    padding: 2rem 1.5rem;
+  }
+}

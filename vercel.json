@@ -1,5 +1,5 @@
 {
-  "framework": "sveltekit",
+  "framework": "nextjs",
   "regions": ["iad1"],
   "redirects": [
     {
