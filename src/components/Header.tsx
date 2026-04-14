@@ -18,8 +18,14 @@ export function Header() {
     <header className={styles.siteHeader}>
       <div className={styles.headerContainer}>
         <Link href="/" className={styles.brand} onClick={() => setMobileOpen(false)}>
-          <span className={styles.brandLogoWrap} aria-hidden>
-            <Image src="/favicon.png" alt="" width={40} height={40} className={styles.brandLogo} />
+          <span className={styles.brandLogoWrap}>
+            <Image
+              src="/apple-touch-icon.png"
+              alt="Dr. Jan Duffy logo"
+              width={40}
+              height={40}
+              className={styles.brandLogo}
+            />
           </span>
           <span className={styles.brandName}>{SITE_CONFIG.businessName}</span>
           <span className={styles.brandTagline}>Dr. Jan Duffy, Realtor</span>

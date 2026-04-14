@@ -27,6 +27,7 @@
   column-gap: 0.6rem;
   text-decoration: none;
   align-items: center;
+  min-width: 0;
 }
 
 .brandLogoWrap {
@@ -52,12 +53,16 @@
   color: #1e3a8a;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brandTagline {
   grid-column: 2;
   font-size: 0.75rem;
   color: #64748b;
+  white-space: nowrap;
 }
 
 .desktopNav {
