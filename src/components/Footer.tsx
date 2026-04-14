@@ -31,6 +31,12 @@ const aboutLinks = [
   { label: "Virtual Tours", href: "/richmond-demo" },
 ]
 
+const trustItems = [
+  "Local Silverado Ranch expertise",
+  "Nevada license S.0197614.LLC",
+  "Berkshire Hathaway HomeServices Nevada Properties",
+]
+
 const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
   `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.city}, ${SITE_CONFIG.address.stateAbbr} ${SITE_CONFIG.address.zipCode}`
 )}`
@@ -128,7 +134,7 @@ export function Footer() {
         <div className={styles.container}>
           <div className={styles.footerGrid}>
             <div className={styles.footerBrand}>
-              <p className="footer-tagline">{SITE_CONFIG.businessName}</p>
+              <p className={styles.footerTagline}>{SITE_CONFIG.businessName}</p>
               <h3>Dr. Jan Duffy | Luxury Real Estate Advisor</h3>
               <p className={styles.footerDescription}>
                 Boutique representation for buyers, sellers, and investors seeking premium Southwest
@@ -165,6 +171,11 @@ export function Footer() {
                   </a>
                 ))}
               </div>
+              <ul className={styles.trustList}>
+                {trustItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
 
             <div className={styles.footerLinks}>
@@ -209,7 +220,7 @@ export function Footer() {
             <p>
               © {year} {SITE_CONFIG.businessName} · Las Vegas &amp; Henderson Real Estate
             </p>
-            <p className="footer-legal">
+            <p className={styles.footerLegal}>
               Nevada license {SITE_CONFIG.licenseNumber} · Equal Housing Opportunity ·{" "}
               {SITE_CONFIG.brokerage.name}
             </p>

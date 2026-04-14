@@ -135,12 +135,19 @@ export function Header() {
           </span>
           <span className={styles.ctaText}>{SITE_CONFIG.phone}</span>
         </a>
+        <a
+          href="https://calendly.com/drjanduffy/15min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.headerSecondaryCta}
+        >
+          Schedule
+        </a>
 
         <button
           type="button"
           className={styles.mobileToggle}
           onClick={() => setMobileOpen((o) => !o)}
-          aria-expanded={mobileOpen}
           aria-label="Toggle menu"
         >
           <span className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ""}`} />
@@ -311,6 +318,15 @@ export function Header() {
               </svg>
             </span>
             Call {SITE_CONFIG.phone}
+          </a>
+          <a
+            href="https://calendly.com/drjanduffy/15min"
+            className={styles.mobileScheduleCta}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+          >
+            Schedule 15-Min Consultation
           </a>
         </nav>
       ) : null}

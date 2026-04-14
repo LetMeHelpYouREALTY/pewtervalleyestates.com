@@ -2,8 +2,11 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 .headerContainer {
@@ -14,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   height: 70px;
+  gap: 0.75rem;
 }
 
 .brand {
@@ -28,6 +32,7 @@
   font-weight: 700;
   color: #1e3a8a;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .brandTagline {
@@ -58,7 +63,9 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  transition: color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
   border-radius: 0.375rem;
 }
 
@@ -116,6 +123,28 @@
 .headerCta:hover {
   background: #0d8a5b;
   transform: translateY(-1px);
+}
+
+.headerSecondaryCta {
+  display: none;
+  padding: 0.625rem 1rem;
+  border: 1px solid rgba(30, 58, 138, 0.22);
+  color: #1e3a8a;
+  background: #ffffff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.headerSecondaryCta:hover {
+  transform: translateY(-1px);
+  border-color: #1e3a8a;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
 }
 
 .ctaIcon {
@@ -197,6 +226,7 @@
   padding: 1rem;
   max-height: calc(100vh - 70px);
   overflow-y: auto;
+  border-top: 1px solid #e2e8f0;
 }
 
 .mobileNav > ul {
@@ -257,6 +287,20 @@
   font-size: 1rem;
 }
 
+.mobileScheduleCta {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #1e3a8a;
+  color: #1e3a8a;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  background: #f8fafc;
+}
+
 @media (min-width: 1024px) {
   .desktopNav {
     display: block;
@@ -264,6 +308,12 @@
 
   .headerCta {
     display: flex;
+  }
+
+  .headerSecondaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobileToggle {

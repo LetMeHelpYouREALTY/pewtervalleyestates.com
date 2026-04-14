@@ -35,6 +35,12 @@
 .ctaContent h2 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.ctaContent p {
+  color: #cbd5f5;
+  margin: 0;
 }
 
 .ctaActions {
@@ -51,6 +57,7 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  white-space: nowrap;
 }
 
 .ctaButton span {
@@ -98,10 +105,37 @@
   margin-bottom: 0.5rem;
 }
 
+.footerTagline {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: #fbbf24;
+  margin: 0 0 0.45rem;
+}
+
 .footerDescription {
   color: #cbd5f5;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+
+.trustList {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.trustList li {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.trustList li::before {
+  content: "• ";
+  color: #fbbf24;
 }
 
 .footerContact {
@@ -180,6 +214,11 @@
   color: #94a3b8;
 }
 
+.footerLegal {
+  color: #cbd5f5;
+  font-weight: 500;
+}
+
 @media (max-width: 1024px) {
   .footerGrid {
     grid-template-columns: 1fr 1fr;
@@ -202,6 +241,10 @@
 
   .footerGrid {
     grid-template-columns: 1fr;
+  }
+
+  .footerMain {
+    padding-top: 3rem;
   }
 }
 
