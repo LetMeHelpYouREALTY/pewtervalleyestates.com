@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { CalendlyInlineWidget, CalendlyPopupLink } from "@/components/CalendlyWidgets"
-import { GoogleMap } from "@/components/GoogleMap"
-import { GoogleReviews } from "@/components/GoogleReviews"
 import { JsonLd } from "@/components/JsonLd"
 import { NAPDisplay } from "@/components/NAPDisplay"
 import { PageViewTracker } from "@/components/PageViewTracker"
@@ -88,26 +86,22 @@ export default function ContactPage() {
               Schedule a consultation
             </h2>
             <CalendlyInlineWidget title="Book your 15-minute call" />
+            <p className={styles.calendlyCta}>
+              Looking for neighborhood details first?{" "}
+              <Link href="/neighborhood-insights" className={styles.calendlyLink}>
+                Open neighborhood insights
+              </Link>
+              {" · "}
+              <Link href="/google-reviews" className={styles.calendlyLink}>
+                Read client reviews
+              </Link>
+            </p>
           </section>
 
           <aside className={styles.aside}>
             <NAPDisplay showGoogleReviewsLink showDirections />
           </aside>
         </div>
-
-        <section className={styles.section} aria-labelledby="reviews-heading">
-          <h2 id="reviews-heading" className={styles.h2}>
-            Client feedback
-          </h2>
-          <GoogleReviews />
-        </section>
-
-        <section className={styles.mapSection} aria-labelledby="map-heading">
-          <h2 id="map-heading" className={styles.srOnly}>
-            Map &amp; directions
-          </h2>
-          <GoogleMap />
-        </section>
       </div>
     </div>
   )
