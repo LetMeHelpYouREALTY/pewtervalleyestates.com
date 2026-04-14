@@ -6,6 +6,11 @@ const primaryImageUrls = [
   `${SITE_CONFIG.url}${MARKETING_IMAGES.community}`,
 ]
 
+function canonicalPageUrl(path = "") {
+  if (!path) return `${SITE_CONFIG.url}/`
+  return `${SITE_CONFIG.url}${path}`
+}
+
 function postalAddress() {
   return {
     "@type": "PostalAddress" as const,
@@ -123,7 +128,7 @@ export function generateOrganizationSchema() {
 }
 
 export function generateWebPageSchema(title: string, description: string, path = "") {
-  const pageUrl = path ? `${SITE_CONFIG.url}${path}` : SITE_CONFIG.url
+  const pageUrl = canonicalPageUrl(path)
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",

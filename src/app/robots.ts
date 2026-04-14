@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 import { SITE_CONFIG } from "@/lib/site-contact"
 
 export default function robots(): MetadataRoute.Robots {
+  const canonicalHost = new URL(SITE_CONFIG.url).host
   return {
     rules: [
       { userAgent: "*", allow: "/" },
@@ -17,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "DotBot", disallow: "/" },
     ],
     sitemap: `${SITE_CONFIG.url}/sitemap.xml`,
-    host: "www.pewtervalleyestates.com",
+    host: canonicalHost,
   }
 }
