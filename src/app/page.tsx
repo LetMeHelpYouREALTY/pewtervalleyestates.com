@@ -1,11 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Pathways } from "@/app/_components/Pathways"
-import { CalendlyInlineWidget } from "@/components/CalendlyWidgets"
-import { CTASection } from "@/components/CTASection"
-import { FeaturesSection } from "@/components/FeaturesSection"
-import { GoogleMap } from "@/components/GoogleMap"
-import { GoogleReviews } from "@/components/GoogleReviews"
 import { HeroSection } from "@/components/HeroSection"
 import { JsonLd } from "@/components/JsonLd"
 import { NAPDisplay } from "@/components/NAPDisplay"
@@ -13,7 +8,6 @@ import { PageViewTracker } from "@/components/PageViewTracker"
 import { RealScoutListings } from "@/components/RealScoutListings"
 import { RelatedPages } from "@/components/RelatedPages"
 import { StickyContactButton } from "@/components/StickyContactButton"
-import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { buildPageMetadata, DEFAULT_OG_IMAGE_PATH } from "@/lib/metadata"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema"
 import { SITE_CONFIG } from "@/lib/site-contact"
@@ -71,181 +65,51 @@ export default function HomePage() {
 
       <HeroSection />
 
-      <section className={styles.quickLead}>
-        <div className={styles.container}>
-          <div className={styles.leadGrid}>
-            <div className={styles.leadFormCard}>
-              <h3>Get Instant Access to New Listings</h3>
-              <p>Be the first to know when new homes hit the market</p>
-              <CalendlyInlineWidget title="Book your buyer consultation" />
-            </div>
-            <div className={styles.leadFormCard}>
-              <h3>Get Your Home&apos;s Value Instantly</h3>
-              <p>See what your home is worth in today&apos;s market</p>
-              <CalendlyInlineWidget title="Book your home valuation consultation" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Pathways />
-
-      <TestimonialsSection />
-      <GoogleReviews />
-
-      <FeaturesSection />
 
       <section className={styles.contentSection}>
         <div className={styles.container}>
-          <div className={styles.contentGrid}>
-            <div className={styles.contentMain}>
-              <NAPDisplay showGoogleReviewsLink showDirections />
-
-              <h3>Pewter Valley Estates: Your Next Home Awaits</h3>
-              <p>
-                Located at Pyle Avenue and S Rancho Destino Rd in zip code 89183, Pewter Valley
-                Estates offers ranch-style homes from 1,950-2,240 sq ft with 3-4 bedrooms. Built by
-                Richmond American Homes, this sold-out community is now in the resale phase,
-                offering exceptional opportunities for buyers and sellers.
-              </p>
-
-              <h3>What Makes This Community Special</h3>
-              <p>
-                Family-friendly environment, proximity to parks (Somerset Hills Park, Goett Family
-                Park), easy I-15 access, and quiet residential streets. Perfect for first-time
-                buyers, growing families, and those seeking single-story living.
-              </p>
-
-              <h3>Popular Next Steps</h3>
-              <p>
-                Explore these high-intent local guides for buyers, sellers, and investors in Pewter
-                Valley Estates and Silverado Ranch.
-              </p>
-              <ul className={styles.popularLinksList}>
-                <li>
-                  <Link href="/sell-your-home">Sell Your Home in Silverado Ranch</Link>
-                </li>
-                <li>
-                  <Link href="/investment-properties">
-                    Investment Properties in 89183 and nearby
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/faq">Pewter Valley Estates Real Estate FAQ</Link>
-                </li>
-              </ul>
-            </div>
-
-            <aside className={styles.contentSidebar}>
-              <div className={styles.quickStats}>
-                <h3>Community Quick Facts</h3>
-                <ul>
-                  <li>
-                    <strong>Location:</strong> Pyle Ave &amp; S Rancho Destino Rd
-                  </li>
-                  <li>
-                    <strong>Zip Code:</strong> 89183
-                  </li>
-                  <li>
-                    <strong>Builder:</strong> Richmond American Homes
-                  </li>
-                  <li>
-                    <strong>Home Styles:</strong> Ranch-style, Single-story
-                  </li>
-                  <li>
-                    <strong>Square Footage:</strong> 1,950-2,240 sq ft
-                  </li>
-                  <li>
-                    <strong>Bedrooms:</strong> 3-4
-                  </li>
-                  <li>
-                    <strong>Price Range:</strong> $450,000-$650,000
-                  </li>
-                  <li>
-                    <strong>Market Status:</strong> Resale
-                  </li>
-                </ul>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.currentPropertyListings}>
-        <div className={styles.container}>
-          <div className={styles.listingsSectionHeader}>
-            <h2>Explore Focused Real Estate Guides</h2>
-            <p className={styles.listingsSubtitle}>
-              We moved detailed service and neighborhood content to focused pages for faster load
-              time and clearer intent.
-            </p>
-          </div>
-
+          <NAPDisplay showGoogleReviewsLink showDirections />
+          <h2 className={styles.sectionTitle}>Start with the page that matches your goal</h2>
+          <p className={styles.listingsSubtitle}>
+            We split long content into focused pages so each experience is shorter, clearer, and
+            easier to act on.
+          </p>
           <div className={styles.listingsCardsGrid}>
             <div className={styles.listingsCard}>
-              <div className={styles.cardIcon}>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden
-                >
-                  <title>Featured properties</title>
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </div>
               <h3>Buyer &amp; Seller Services</h3>
               <p>
-                Strategy-focused page for buyer representation, seller marketing, pricing, and
-                conversion-focused next steps.
+                Scheduling, strategy, pricing guidance, and social proof now live on a dedicated
+                services page.
               </p>
-              <ul className={styles.propertiesFeatures}>
-                <li>Buyer and seller workflows</li>
-                <li>Negotiation and pricing guidance</li>
-                <li>Direct conversion actions</li>
-                <li>Local market context</li>
-              </ul>
               <Link
                 href="/buyer-seller-services"
                 className={`${styles.cardButton} ${styles.cardButtonPrimary}`}
               >
-                Open Service Guide
+                Open Services
               </Link>
             </div>
-
             <div className={styles.listingsCard}>
-              <div className={styles.cardIcon}>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  aria-hidden
-                >
-                  <title>Contact by phone</title>
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </div>
               <h3>Neighborhood Insights</h3>
               <p>
-                Community profile, quick facts, commute context, and local FAQ for Pewter Valley
-                Estates within Silverado Ranch.
+                Community quick facts, map context, local FAQs, and area comparison links are now in
+                one place.
               </p>
-              <div className={styles.contactInfo}>
-                <p className={styles.contactItem}>
-                  <strong>Location:</strong> 89183 / Silverado Ranch
-                </p>
-                <p className={styles.contactItem}>
-                  <strong>Focus:</strong> schools, commute, amenities
-                </p>
-              </div>
               <Link
                 href="/neighborhood-insights"
                 className={`${styles.cardButton} ${styles.cardButtonSecondary}`}
               >
-                Open Neighborhood Guide
+                Open Neighborhood Insights
+              </Link>
+            </div>
+            <div className={styles.listingsCard}>
+              <h3>Contact &amp; Calendar</h3>
+              <p>
+                Use the contact page for direct scheduling, map directions, and additional review
+                context.
+              </p>
+              <Link href="/contact" className={`${styles.cardButton} ${styles.cardButtonPrimary}`}>
+                Open Contact
               </Link>
             </div>
           </div>
@@ -254,13 +118,7 @@ export default function HomePage() {
 
       <RealScoutListings />
 
-      <section className={styles.mapSection}>
-        <GoogleMap />
-      </section>
-
       <RelatedPages currentPage="/" />
-
-      <CTASection />
       <StickyContactButton />
     </div>
   )

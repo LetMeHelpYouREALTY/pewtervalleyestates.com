@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { GoogleMap } from "@/components/GoogleMap"
 import { JsonLd } from "@/components/JsonLd"
 import { NAPDisplay } from "@/components/NAPDisplay"
 import { PageViewTracker } from "@/components/PageViewTracker"
@@ -117,6 +118,11 @@ export default function NeighborhoodInsightsPage() {
                 <Link href="/neighborhood-guide">Full neighborhood guide</Link>
               </li>
             </ul>
+          </section>
+
+          <section className={styles.linksSection} aria-label="Map and directions">
+            <h2>Map &amp; Directions</h2>
+            <GoogleMap />
           </section>
         </article>
       </div>

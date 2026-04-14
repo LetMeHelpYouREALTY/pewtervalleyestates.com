@@ -1,7 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { CalendlyInlineWidget } from "@/components/CalendlyWidgets"
+import { GoogleReviews } from "@/components/GoogleReviews"
 import { JsonLd } from "@/components/JsonLd"
 import { PageViewTracker } from "@/components/PageViewTracker"
+import { TestimonialsSection } from "@/components/TestimonialsSection"
 import { buildPageMetadata, DEFAULT_OG_IMAGE_PATH } from "@/lib/metadata"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema"
 import { SITE_CONFIG } from "@/lib/site-contact"
@@ -103,6 +106,17 @@ export default function BuyerSellerServicesPage() {
                 <p>{faq.answer}</p>
               </details>
             ))}
+          </section>
+
+          <section className={styles.faqSection} aria-labelledby="services-schedule">
+            <h2 id="services-schedule">Book Buyer or Seller Strategy Time</h2>
+            <CalendlyInlineWidget title="Schedule your buyer or seller consultation" />
+          </section>
+
+          <section className={styles.faqSection} aria-labelledby="services-social-proof">
+            <h2 id="services-social-proof">Client Feedback</h2>
+            <TestimonialsSection />
+            <GoogleReviews />
           </section>
 
           <p className={styles.inlineCta}>
