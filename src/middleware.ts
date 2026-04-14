@@ -2,8 +2,21 @@ import type { NextRequest } from "next/server"
 import { NextResponse } from "next/server"
 
 const CACHE_RESET_COOKIE = "pve-cache-reset-v1"
+const CANONICAL_HOST = "www.pewtervalleyestates.com"
 
 export function middleware(request: NextRequest) {
+  // Enforce one canonical host/protocol for all route requests.
+  const host = request.headers.get("host") || request.nextUrl.host
+  const proto =
+    request.headers.get("x-forwarded-proto") || request.nextUrl.protocol.replace(":", "")
+  const needsCanonicalRedirect = host !== CANONICAL_HOST || proto !== "https"
+  if (needsCanonicalRedirect) {
+    const destination = request.nextUrl.clone()
+    destination.protocol = "https"
+    destination.host = CANONICAL_HOST
+    return NextResponse.redirect(destination, 308)
+  }
+
   const response = NextResponse.next()
 
   // Apply only to real page navigations (HTML docs), not static assets/API.
