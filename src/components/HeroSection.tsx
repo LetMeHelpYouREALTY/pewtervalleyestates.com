@@ -2,11 +2,41 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect } from "react"
 import { trackEvent } from "@/lib/analytics"
 import { MARKETING_IMAGES } from "@/lib/marketing-images"
 import styles from "./HeroSection.module.css"
 
 export function HeroSection() {
+  useEffect(() => {
+    const title = document.querySelector(`.${styles.heroTitle}`) as HTMLElement | null
+    const rect = title?.getBoundingClientRect()
+    const computed = title ? window.getComputedStyle(title) : null
+
+    // #region agent log
+    fetch("http://127.0.0.1:7392/ingest/ac9e1676-d46e-4669-a606-bb52bb5efc78", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "096335" },
+      body: JSON.stringify({
+        sessionId: "096335",
+        runId: "pre-fix",
+        hypothesisId: "H3",
+        location: "src/components/HeroSection.tsx:13",
+        message: "hero_title_layout_and_font_state",
+        data: {
+          titleFound: Boolean(title),
+          top: rect?.top ?? null,
+          height: rect?.height ?? null,
+          fontFamily: computed?.fontFamily ?? null,
+          fontSize: computed?.fontSize ?? null,
+          visibility: computed?.visibility ?? null,
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {})
+    // #endregion
+  }, [])
+
   return (
     <section className={styles.hero}>
       <div className={styles.heroBackground}>
