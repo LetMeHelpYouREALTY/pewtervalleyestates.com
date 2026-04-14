@@ -37,6 +37,9 @@
 }
 
 .featureCard {
+  width: 100%;
+  text-align: left;
+  appearance: none;
   background: white;
   border-radius: 1rem;
   padding: 2rem;
@@ -72,8 +75,10 @@
   margin-bottom: 1.5rem;
 }
 
-.iconEmoji {
-  font-size: 2rem;
+.featureIcon svg {
+  width: 2rem;
+  height: 2rem;
+  stroke: #1e3a8a;
 }
 
 .featureContent {

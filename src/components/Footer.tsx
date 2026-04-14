@@ -12,6 +12,7 @@ const primaryLinks = [
 
 const resourceLinks = [
   { label: "Neighborhood Guide", href: "/neighborhood-guide" },
+  { label: "Neighborhood insights (89183)", href: "/neighborhood-insights" },
   { label: "Pewter: nearby amenities", href: "/pewter-valley-estates/amenities" },
   { label: "Silverado: commute & transport", href: "/silverado-ranch/getting-around" },
   { label: "Silverado Ranch (Henderson)", href: "/silverado-ranch" },
@@ -23,6 +24,7 @@ const resourceLinks = [
 
 const aboutLinks = [
   { label: "About Dr. Jan Duffy", href: "/about" },
+  { label: "Buyer & Seller Services", href: "/buyer-seller-services" },
   { label: "Meet Your Realtor", href: "/dr-jan-duffy" },
   { label: "Google Reviews", href: "/google-reviews" },
   { label: "Contact", href: "/contact" },
@@ -60,7 +62,19 @@ export function Footer() {
                 href={`tel:${SITE_CONFIG.phoneTel}`}
                 className={`${styles.ctaButton} ${styles.primary}`}
               >
-                <span>📞 Call {SITE_CONFIG.phone}</span>
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden
+                  >
+                    <title>Call</title>
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  Call {SITE_CONFIG.phone}
+                </span>
               </a>
               <a
                 href={directionsUrl}
@@ -68,7 +82,20 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className={`${styles.ctaButton} ${styles.outline}`}
               >
-                🗺️ Directions
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden
+                  >
+                    <title>Directions</title>
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  Directions
+                </span>
               </a>
               {SITE_CONFIG.googleReviewsUrl ? (
                 <a
@@ -77,7 +104,19 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className={`${styles.ctaButton} ${styles.ghost}`}
                 >
-                  ⭐ View Google Reviews
+                  <span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      aria-hidden
+                    >
+                      <title>Google reviews</title>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    View Google Reviews
+                  </span>
                 </a>
               ) : null}
             </div>

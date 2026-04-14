@@ -19,12 +19,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${base}/buyer-seller-services`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.88,
+    },
+    {
+      url: `${base}/neighborhood-insights`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.88,
+    },
   ]
 
   for (const key of Object.keys(MARKETING_PAGES)) {
     const path = `/${key}`
-    const priority =
-      path.includes("homes-for-sale") || path.includes("listings") ? 0.9 : 0.8
+    const priority = path.includes("homes-for-sale") || path.includes("listings") ? 0.9 : 0.8
     entries.push({
       url: `${base}${path}`,
       lastModified,

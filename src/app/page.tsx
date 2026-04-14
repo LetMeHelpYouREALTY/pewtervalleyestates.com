@@ -155,9 +155,10 @@ export default function HomePage() {
       <section className={styles.currentPropertyListings}>
         <div className={styles.container}>
           <div className={styles.listingsSectionHeader}>
-            <h2>Current Property Listings</h2>
+            <h2>Explore Focused Real Estate Guides</h2>
             <p className={styles.listingsSubtitle}>
-              Browse our available homes in Las Vegas and surrounding areas
+              We moved detailed service and neighborhood content to focused pages for faster load
+              time and clearer intent.
             </p>
           </div>
 
@@ -176,19 +177,22 @@ export default function HomePage() {
                   <polyline points="9 22 9 12 15 12 15 22" />
                 </svg>
               </div>
-              <h3>Featured Properties</h3>
-              <p>Discover your dream home with our curated selection of available properties.</p>
+              <h3>Buyer &amp; Seller Services</h3>
+              <p>
+                Strategy-focused page for buyer representation, seller marketing, pricing, and
+                conversion-focused next steps.
+              </p>
               <ul className={styles.propertiesFeatures}>
-                <li>Modern new construction homes</li>
-                <li>3 Bedrooms, 2 Bathrooms</li>
-                <li>Resort-style amenities</li>
-                <li>Prime Las Vegas locations</li>
+                <li>Buyer and seller workflows</li>
+                <li>Negotiation and pricing guidance</li>
+                <li>Direct conversion actions</li>
+                <li>Local market context</li>
               </ul>
               <Link
-                href="/homes-for-sale"
+                href="/buyer-seller-services"
                 className={`${styles.cardButton} ${styles.cardButtonPrimary}`}
               >
-                View All Listings
+                Open Service Guide
               </Link>
             </div>
 
@@ -205,23 +209,24 @@ export default function HomePage() {
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
               </div>
-              <h3>Contact Dr. Jan Duffy</h3>
-              <p>Your trusted real estate agent for Las Vegas properties.</p>
+              <h3>Neighborhood Insights</h3>
+              <p>
+                Community profile, quick facts, commute context, and local FAQ for Pewter Valley
+                Estates within Silverado Ranch.
+              </p>
               <div className={styles.contactInfo}>
                 <p className={styles.contactItem}>
-                  <strong>Phone:</strong>
-                  <a href={`tel:${SITE_CONFIG.phoneTel}`}>{SITE_CONFIG.phone}</a>
+                  <strong>Location:</strong> 89183 / Silverado Ranch
                 </p>
                 <p className={styles.contactItem}>
-                  <strong>Email:</strong>
-                  <a href={`mailto:${SITE_CONFIG.email}`}>{SITE_CONFIG.email}</a>
+                  <strong>Focus:</strong> schools, commute, amenities
                 </p>
               </div>
               <Link
-                href="/contact"
+                href="/neighborhood-insights"
                 className={`${styles.cardButton} ${styles.cardButtonSecondary}`}
               >
-                Get In Touch
+                Open Neighborhood Guide
               </Link>
             </div>
           </div>
@@ -229,74 +234,6 @@ export default function HomePage() {
       </section>
 
       <RealScoutListings />
-
-      <section className={styles.services}>
-        <div className={styles.container}>
-          <h2>Complete Real Estate Services for Buyers &amp; Sellers</h2>
-
-          <div className={styles.servicesSplit}>
-            <div className={`${styles.servicesColumn} ${styles.buyerServices}`}>
-              <h3>For Home Buyers</h3>
-              <div className={styles.serviceList}>
-                <div className={styles.serviceItem}>
-                  <span className={styles.check}>✓</span>
-                  <div>
-                    <strong>Free Home Search &amp; Alerts</strong>
-                    <p>Get instant notifications when new homes match your criteria</p>
-                  </div>
-                </div>
-                <div className={styles.serviceItem}>
-                  <span className={styles.check}>✓</span>
-                  <div>
-                    <strong>Expert Negotiation</strong>
-                    <p>Save thousands with proven negotiation strategies</p>
-                  </div>
-                </div>
-                <div className={styles.serviceItem}>
-                  <span className={styles.check}>✓</span>
-                  <div>
-                    <strong>Full Buyer Representation</strong>
-                    <p>From search to closing, we handle everything</p>
-                  </div>
-                </div>
-              </div>
-              <Link href="/buy-a-home" className={styles.serviceCta}>
-                Start Your Home Search →
-              </Link>
-            </div>
-
-            <div className={`${styles.servicesColumn} ${styles.sellerServices}`}>
-              <h3>For Home Sellers</h3>
-              <div className={styles.serviceList}>
-                <div className={styles.serviceItem}>
-                  <span className={styles.check}>✓</span>
-                  <div>
-                    <strong>Free Home Valuation</strong>
-                    <p>Know your home&apos;s true market value instantly</p>
-                  </div>
-                </div>
-                <div className={styles.serviceItem}>
-                  <span className={styles.check}>✓</span>
-                  <div>
-                    <strong>Professional Marketing</strong>
-                    <p>Professional photos, staging, and multi-channel promotion</p>
-                  </div>
-                </div>
-                <div className={styles.serviceItem}>
-                  <span className={styles.check}>✓</span>
-                  <div>
-                    <strong>Strategic Pricing</strong>
-                    <p>Data-driven pricing to sell faster for more money</p>
-                  </div>
-                </div>
-              </div>
-              <Link href="/sell-your-home" className={styles.serviceCta}>
-                Get Your Free Valuation →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className={styles.mapSection}>
         <GoogleMap />

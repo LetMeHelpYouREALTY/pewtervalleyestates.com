@@ -53,6 +53,17 @@
     box-shadow 0.2s ease;
 }
 
+.ctaButton span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ctaButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .ctaButton.primary {
   background: #fbbf24;
   color: #0f172a;
