@@ -5,6 +5,7 @@ import Script from "next/script"
 import { useEffect, useRef, useState } from "react"
 import { trackEvent } from "@/lib/analytics"
 import styles from "./RealScoutListings.module.css"
+import { PalmsListingCard } from "./PalmsListingCard"
 
 const AGENT = "QWdlbnQtMjI1MDUw"
 
@@ -149,6 +150,7 @@ export function RealScoutListings() {
           <div className={styles.realscoutContainer}>
             <div ref={hostRef} className={styles.realscoutHost} />
           </div>
+          <PalmsListingCard />
           <div className={styles.realscoutFooter}>
             <p>
               <strong>Need help finding the perfect home?</strong>{" "}
