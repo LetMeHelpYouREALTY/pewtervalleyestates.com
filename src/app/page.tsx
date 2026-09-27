@@ -36,11 +36,11 @@ const faqData = [
   },
   {
     question: "What types of homes are available in Pewter Valley Estates?",
-    answer: `Pewter Valley Estates features ranch-style, single-story homes built by Richmond American Homes. Homes range from 1,950 to 2,240 square feet with 3-4 bedrooms. All homes feature modern floor plans, energy-efficient designs, and are situated on well-maintained lots in a quiet, family-friendly environment.`,
+    answer: `Pewter Valley Estates features ranch-style, single-story homes built by Richmond American Homes. Homes range from 1,950 to 2,240 square feet with 3-4 bedrooms. All homes feature modern floor plans, energy-efficient designs, and are situated on well-maintained lots in a quiet residential setting.`,
   },
   {
     question: "Where is Pewter Valley Estates located?",
-    answer: `Pewter Valley Estates sits within Silverado Ranch in Southwest Las Vegas—Pyle Avenue and S Rancho Destino Rd, zip code 89183. The community offers easy access to I-15 and Las Vegas Boulevard, while maintaining a peaceful, rural-urban balance. Nearby amenities include Somerset Hills Park, Goett Family Park, Jimmy Pettyjohn Jr. Park, and the Southern Highlands Golf Club.`,
+    answer: `Pewter Valley Estates sits within Silverado Ranch in Southwest Las Vegas—Pyle Avenue and S Rancho Destino Rd, zip code 89183. The community offers easy access to I-15 and Las Vegas Boulevard, while maintaining a peaceful, rural-urban balance. Nearby errands include Sprouts and Smith's on the Silverado Ranch corridor, plus Silverado Ranch Park at 9855 Gilespie St.`,
   },
   {
     question: "How can I buy or sell a home in Pewter Valley Estates?",

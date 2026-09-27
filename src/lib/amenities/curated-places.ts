@@ -1,12 +1,15 @@
 /**
  * Verified nearby places for static HTML, map fallback, and JSON-LD ItemList.
- * Only include businesses/locations with a published street address.
+ * Street addresses verified against official source URLs (2026-09-27).
  */
+
+import type { AmenityCategoryId } from "@/lib/amenities/community-config"
 
 export type CuratedPlace = {
   name: string
   address: string
   category: string
+  categoryId: AmenityCategoryId
   schemaType:
     | "Restaurant"
     | "Park"
@@ -16,6 +19,7 @@ export type CuratedPlace = {
     | "Store"
     | "Pharmacy"
     | "Place"
+  sourceUrl: string
   note?: string
 }
 
@@ -24,67 +28,67 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     name: "Sprouts Farmers Market (Silverado Ranch)",
     address: "1140 E Silverado Ranch Blvd, Las Vegas, NV 89183",
     category: "Grocery",
+    categoryId: "grocery",
     schemaType: "Store",
+    sourceUrl: "https://www.sprouts.com/store/nv/las-vegas/silverado-ranch/",
   },
   {
-    name: "Smith's Food and Drug",
+    name: "Smith's Food and Drug (Silverado Ranch)",
     address: "9750 S Maryland Pkwy, Las Vegas, NV 89183",
     category: "Grocery",
+    categoryId: "grocery",
     schemaType: "Store",
+    sourceUrl: "https://www.smithsfoodanddrug.com/stores/grocery/nv/las-vegas/smiths-9750-s-maryland-pkwy",
   },
   {
-    name: "Somerset Hills Park",
-    address: "6750 Casada Way, Las Vegas, NV 89183",
+    name: "Silverado Ranch Park",
+    address: "9855 Gilespie St, Las Vegas, NV 89183",
     category: "Parks & recreation",
+    categoryId: "parks",
     schemaType: "Park",
+    sourceUrl: "https://parkslocator.clarkcountynv.gov/Search/ParkDetail?parkId=16",
+    note: "Clark County park with sports fields, skate park, dog park, and walking paths.",
   },
   {
-    name: "Goett Family Park",
-    address: "7200 Goett Ave, Las Vegas, NV 89183",
-    category: "Parks & recreation",
-    schemaType: "Park",
-  },
-  {
-    name: "Jimmy Pettyjohn Jr. Park",
-    address: "7350 W Flamingo Rd, Las Vegas, NV 89147",
-    category: "Parks & recreation",
-    schemaType: "Park",
-    note: "Southwest Las Vegas park referenced in local Pewter Valley context.",
-  },
-  {
-    name: "Southern Highlands Golf Club",
-    address: "9401 Williamsburg Plaza, Las Vegas, NV 89141",
-    category: "Golf",
-    schemaType: "GolfCourse",
-  },
-  {
-    name: "St. Rose Dominican Hospital — Siena Campus",
+    name: "Dignity Health — St. Rose Dominican Hospital, Siena Campus",
     address: "3001 St Rose Pkwy, Henderson, NV 89052",
     category: "Healthcare",
+    categoryId: "healthcare",
     schemaType: "Hospital",
+    sourceUrl: "https://www.dignityhealth.org/las-vegas/locations/siena",
   },
   {
     name: "John C. Bass Elementary School",
-    address: "9100 W Maule Ave, Las Vegas, NV 89148",
+    address: "10377 Rancho Destino Rd, Las Vegas, NV 89183",
     category: "Schools",
+    categoryId: "schools",
     schemaType: "School",
-    note: "Clark County School District — confirm attendance boundaries for a specific address.",
+    sourceUrl: "https://sites.google.com/a/nv.ccsd.net/john-c-bass-elementary/home",
+    note: "Clark County School District — confirm assigned schools for a specific address.",
   },
   {
     name: "Charles A. Silvestri Junior High School",
-    address: "9200 W Maule Ave, Las Vegas, NV 89148",
+    address: "1055 Silverado Ranch Blvd, Las Vegas, NV 89183",
     category: "Schools",
+    categoryId: "schools",
     schemaType: "School",
-    note: "Clark County School District — confirm attendance boundaries for a specific address.",
+    sourceUrl: "https://www.silvestrijhs.org/",
+    note: "Clark County School District — confirm assigned schools for a specific address.",
   },
   {
     name: "Liberty High School",
-    address: "3700 Liberty Heights Ave, Henderson, NV 89014",
+    address: "3700 Liberty Heights Ave, Henderson, NV 89052",
     category: "Schools",
+    categoryId: "schools",
     schemaType: "School",
-    note: "Clark County School District — confirm attendance boundaries for a specific address.",
+    sourceUrl: "https://www.libertyhighpatriots.com/",
+    note: "Clark County School District — confirm assigned schools for a specific address.",
   },
 ]
+
+export function curatedPlacesForCategory(categoryId: AmenityCategoryId): CuratedPlace[] {
+  return CURATED_NEARBY_PLACES.filter((place) => place.categoryId === categoryId)
+}
 
 export type AmenityContentSection = {
   id: string
@@ -97,7 +101,7 @@ export const AMENITY_CONTENT_SECTIONS: AmenityContentSection[] = [
     id: "dining",
     heading: "Dining near Pewter Valley Estates",
     paragraphs: [
-      "Silverado Ranch Boulevard and the Maryland Parkway corridor put everyday dining within a short drive of Pewter Valley Estates. For groceries and quick meals, Sprouts Farmers Market at 1140 E Silverado Ranch Blvd and Smith's Food and Drug at 9750 S Maryland Pkwy are established neighborhood anchors in zip code 89183.",
+      "Silverado Ranch Boulevard and the Maryland Parkway corridor put everyday dining within a short drive of Pewter Valley Estates. For groceries and quick meals, Sprouts Farmers Market at 1140 E Silverado Ranch Blvd and Smith's Food and Drug at 9750 S Maryland Pkwy are convenient stops for residents and buyers touring zip code 89183.",
       "Use the interactive map above to explore current restaurants and cafes by category. Hours and menus change — confirm details before you visit.",
     ],
   },
@@ -105,15 +109,15 @@ export const AMENITY_CONTENT_SECTIONS: AmenityContentSection[] = [
     id: "parks",
     heading: "Parks & outdoor recreation",
     paragraphs: [
-      "Clark County parks close to Pewter Valley Estates include Somerset Hills Park (6750 Casada Way) and Goett Family Park (7200 Goett Ave), both in the 89183 area. Jimmy Pettyjohn Jr. Park on W Flamingo Rd is another southwest valley option often cited for family recreation.",
-      "Southern Highlands Golf Club (9401 Williamsburg Plaza) offers championship golf a few miles south for players who want a full-service course experience.",
+      "Silverado Ranch Park at 9855 Gilespie St is the main Clark County park serving the 89183 Silverado Ranch area, with sports fields, a skate park, dog areas, and walking paths.",
+      "Use the map's parks filter for additional green space and recreation sites near your route.",
     ],
   },
   {
     id: "healthcare",
     heading: "Healthcare & pharmacies",
     paragraphs: [
-      "St. Rose Dominican Hospital — Siena Campus at 3001 St Rose Pkwy in Henderson provides full-service hospital care south of Silverado Ranch. Urgent care, primary care, and pharmacy options also cluster along St Rose Parkway and Maryland Parkway — filter the map for healthcare and pharmacies to see what is open now.",
+      "Dignity Health St. Rose Dominican Hospital — Siena Campus at 3001 St Rose Pkwy in Henderson provides full-service hospital care south of Silverado Ranch. Urgent care, primary care, and pharmacy options also cluster along St Rose Parkway and Maryland Parkway — filter the map for healthcare and pharmacies to see what is open now.",
     ],
   },
   {
@@ -127,7 +131,7 @@ export const AMENITY_CONTENT_SECTIONS: AmenityContentSection[] = [
     id: "schools",
     heading: "Schools (Clark County School District)",
     paragraphs: [
-      "Public schools serving much of southwest Silverado Ranch include John C. Bass Elementary (9100 W Maule Ave), Charles A. Silvestri Junior High (9200 W Maule Ave), and Liberty High School (3700 Liberty Heights Ave, Henderson). CCSD boundaries shift — verify the assigned school for any address you are considering before you write an offer.",
+      "Which CCSD schools are assigned to Pewter Valley Estates addresses? Verify with the CCSD Zoning Search before you rely on any school name in marketing materials. Nearby CCSD campuses often discussed for southwest Silverado Ranch include John C. Bass Elementary (10377 Rancho Destino Rd), Charles A. Silvestri Junior High (1055 Silverado Ranch Blvd), and Liberty High School (3700 Liberty Heights Ave, Henderson).",
     ],
   },
   {
@@ -144,7 +148,7 @@ export const AMENITIES_FAQ = [
   {
     question: "What grocery stores are near Pewter Valley Estates?",
     answer:
-      "Sprouts Farmers Market at 1140 E Silverado Ranch Blvd and Smith's Food and Drug at 9750 S Maryland Pkwy are two established grocery options in the 89183 Silverado Ranch area, both within a short drive of Pewter Valley Estates.",
+      "Sprouts Farmers Market at 1140 E Silverado Ranch Blvd and Smith's Food and Drug at 9750 S Maryland Pkwy are two grocery options in the 89183 Silverado Ranch area, both within a short drive of Pewter Valley Estates.",
   },
   {
     question: "How far is Pewter Valley Estates from the Las Vegas Strip?",
@@ -154,17 +158,17 @@ export const AMENITIES_FAQ = [
   {
     question: "Are there hospitals near Pewter Valley Estates?",
     answer:
-      "St. Rose Dominican Hospital — Siena Campus at 3001 St Rose Pkwy in Henderson is a full-service hospital south of Silverado Ranch, typically reachable in about 10–15 minutes by car under normal conditions.",
+      "Dignity Health St. Rose Dominican Hospital — Siena Campus at 3001 St Rose Pkwy in Henderson is a full-service hospital south of Silverado Ranch, typically reachable in about 10–15 minutes by car under normal conditions.",
   },
   {
     question: "Which parks are closest to Pewter Valley Estates?",
     answer:
-      "Somerset Hills Park on Casada Way and Goett Family Park on Goett Avenue are Clark County parks in the immediate Silverado Ranch / 89183 area.",
+      "Silverado Ranch Park at 9855 Gilespie St is the primary Clark County park serving the 89183 Silverado Ranch area.",
   },
   {
     question: "What schools serve Pewter Valley Estates?",
     answer:
-      "Many southwest Silverado Ranch addresses feed Clark County schools such as John C. Bass Elementary, Charles A. Silvestri Junior High, and Liberty High School — always confirm the assigned school for the exact property address before you buy.",
+      "Which CCSD schools are assigned to Pewter Valley Estates addresses? Verify with the CCSD Zoning Search. Nearby CCSD campuses often referenced for southwest Silverado Ranch include John C. Bass Elementary, Charles A. Silvestri Junior High, and Liberty High School — always confirm the assigned school for the exact property address before you buy.",
   },
   {
     question: "How do I get to Harry Reid International Airport from Pewter Valley Estates?",

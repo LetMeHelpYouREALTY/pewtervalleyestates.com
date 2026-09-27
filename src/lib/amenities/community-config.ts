@@ -37,7 +37,7 @@ export type AmenityCategory = {
   ariaLabel: string
 }
 
-/** Family / resale suburban community — groceries, parks, and schools before nightlife. */
+/** Resale suburban community — groceries, parks, and schools before nightlife. */
 export const AMENITY_CATEGORIES: AmenityCategory[] = [
   {
     id: "grocery",
