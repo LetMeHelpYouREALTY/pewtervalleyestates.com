@@ -38,7 +38,7 @@ export const CURATED_NEARBY_PLACES: CuratedPlace[] = [
     category: "Grocery",
     categoryId: "grocery",
     schemaType: "Store",
-    sourceUrl: "https://www.smithsfoodanddrug.com/stores/grocery/nv/las-vegas/smiths-9750-s-maryland-pkwy",
+    sourceUrl: "https://www.smithsfoodanddrug.com/stores/grocery/nv/las-vegas/silverado-ranch/706/00394",
   },
   {
     name: "Silverado Ranch Park",
