@@ -47,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.88,
     },
+    {
+      url: `${base}/pewter-valley-estates/amenities`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ]
 
   for (const key of Object.keys(MARKETING_PAGES)) {

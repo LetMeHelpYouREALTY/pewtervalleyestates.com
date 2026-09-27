@@ -13,6 +13,20 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "d1buiexcd5gara.cloudfront.net", pathname: "/**" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/amenities",
+        destination: "/pewter-valley-estates/amenities",
+        permanent: true,
+      },
+      {
+        source: "/nearby-amenities",
+        destination: "/pewter-valley-estates/amenities",
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

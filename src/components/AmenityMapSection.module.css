@@ -1,0 +1,22 @@
+.wrap {
+  width: 100%;
+}
+
+.footerLink {
+  text-align: center;
+  margin: -1rem 0 2rem;
+}
+
+.footerLink a {
+  color: var(--color-indigo-700, #1e3a8a);
+  font-weight: 600;
+}
+
+.mapPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-slate-100, #f1f5f9);
+  border-radius: var(--radius-lg, 1rem);
+  color: var(--color-slate-600, #475569);
+}

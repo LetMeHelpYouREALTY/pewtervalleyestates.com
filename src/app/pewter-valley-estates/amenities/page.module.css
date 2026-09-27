@@ -1,0 +1,119 @@
+.wrap {
+  width: 100%;
+  padding: var(--space-10) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  color: var(--color-slate-500);
+}
+
+.breadcrumbs a {
+  color: var(--color-indigo-700);
+}
+
+.h1 {
+  margin: 0 0 var(--space-4);
+  color: var(--color-indigo-700);
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+}
+
+.lead {
+  margin: 0 0 var(--space-6);
+  line-height: 1.8;
+  color: var(--color-slate-700);
+  max-width: 48rem;
+}
+
+.mapLoading {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-slate-100);
+  border-radius: var(--radius-lg);
+  color: var(--color-slate-600);
+  margin-bottom: var(--space-8);
+}
+
+.contentBlock {
+  margin-top: var(--space-8);
+}
+
+.contentBlock h2 {
+  margin: 0 0 var(--space-3);
+  color: var(--color-indigo-700);
+  font-size: 1.375rem;
+}
+
+.contentBlock p {
+  margin: 0 0 var(--space-4);
+  line-height: 1.75;
+  color: var(--color-slate-700);
+}
+
+.faqSection {
+  margin-top: var(--space-10);
+}
+
+.faqSection h2 {
+  margin: 0 0 var(--space-4);
+  color: var(--color-indigo-700);
+}
+
+.faqItem {
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-3);
+  background: white;
+}
+
+.faqItem summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-slate-800);
+}
+
+.faqItem p {
+  margin: var(--space-3) 0 0;
+  line-height: 1.7;
+  color: var(--color-slate-700);
+}
+
+.trust {
+  margin-top: var(--space-10);
+  padding: var(--space-6);
+  background: var(--color-indigo-50, #eef2ff);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-indigo-100, #e0e7ff);
+}
+
+.trust h2 {
+  margin: 0 0 var(--space-3);
+  color: var(--color-indigo-800);
+  font-size: 1.25rem;
+}
+
+.trust p {
+  margin: 0 0 var(--space-3);
+  line-height: 1.7;
+  color: var(--color-slate-800);
+}
+
+.trust a {
+  color: var(--color-indigo-700);
+  font-weight: 600;
+}

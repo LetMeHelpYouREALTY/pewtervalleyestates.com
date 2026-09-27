@@ -9,7 +9,9 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get("host") || request.nextUrl.host
   const proto =
     request.headers.get("x-forwarded-proto") || request.nextUrl.protocol.replace(":", "")
-  const needsCanonicalRedirect = host !== CANONICAL_HOST || proto !== "https"
+  const isVercelPreview = host.endsWith(".vercel.app")
+  const needsCanonicalRedirect =
+    !isVercelPreview && (host !== CANONICAL_HOST || proto !== "https")
   if (needsCanonicalRedirect) {
     const destination = request.nextUrl.clone()
     destination.protocol = "https"
