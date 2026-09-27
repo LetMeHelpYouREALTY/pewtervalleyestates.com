@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Pathways } from "@/app/_components/Pathways"
+import { AmenityMapSection } from "@/components/AmenityMapSection"
 import { HeroSection } from "@/components/HeroSection"
 import { JsonLd } from "@/components/JsonLd"
 import { NAPDisplay } from "@/components/NAPDisplay"
@@ -117,6 +118,8 @@ export default function HomePage() {
       </section>
 
       <RealScoutListings />
+
+      <AmenityMapSection />
 
       <RelatedPages currentPage="/" />
       <StickyContactButton />

@@ -183,15 +183,6 @@ export const MARKETING_PAGES: Record<string, MarketingPage> = {
       "Ask Dr. Jan Duffy for a neighborhood tour plan that matches your lifestyle checklist.",
     ],
   },
-  "pewter-valley-estates/amenities": {
-    title: `Pewter Valley Estates Amenities | ${SITE_CONFIG.businessName}`,
-    description: `Amenities and lifestyle context for Pewter Valley Estates—Silverado Ranch / Southwest Las Vegas (89183). Call ${SITE_CONFIG.phone}.`,
-    h1: "Pewter Valley Estates Amenities",
-    paragraphs: [
-      "Community amenities vary by tract and HOA—confirm what applies to a specific address during due diligence.",
-      "Dr. Jan Duffy can help you compare homes with a consistent checklist so you are evaluating apples-to-apples.",
-    ],
-  },
   "neighborhood-guide": {
     title: `Neighborhood Guide | ${SITE_CONFIG.businessName}`,
     description: `Neighborhood guide for Silverado Ranch, Pewter Valley Estates, and Southwest Las Vegas. Call ${SITE_CONFIG.phone}.`,

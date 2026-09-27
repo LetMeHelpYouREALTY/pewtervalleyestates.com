@@ -64,6 +64,18 @@ export function generateLocalBusinessSchema() {
         description:
           "Master-planned area in southeast Clark County (89123, 89183). Pewter Valley Estates is a community within Silverado Ranch.",
       },
+      {
+        "@type": "Place",
+        name: "Pewter Valley Estates",
+        description:
+          "Richmond American community within Silverado Ranch, southwest Las Vegas Valley (89183).",
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: SITE_CONFIG.coordinates.latitude,
+          longitude: SITE_CONFIG.coordinates.longitude,
+        },
+        address: postalAddress(),
+      },
     ],
     serviceType: [
       "Residential buyer representation",
@@ -195,6 +207,52 @@ export function generateFAQSchema(
       acceptedAnswer: {
         "@type": "Answer",
         text: faq.answer,
+      },
+    })),
+  }
+}
+
+export function generateCommunityPlaceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "@id": `${SITE_CONFIG.url}/pewter-valley-estates/amenities#community`,
+    name: "Pewter Valley Estates",
+    description:
+      "Resale ranch-style community within Silverado Ranch at Pyle Avenue and S Rancho Destino Rd, Las Vegas NV 89183.",
+    address: postalAddress(),
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE_CONFIG.coordinates.latitude,
+      longitude: SITE_CONFIG.coordinates.longitude,
+    },
+    containedInPlace: {
+      "@type": "Place",
+      name: "Silverado Ranch",
+    },
+  }
+}
+
+export function generateCuratedPlacesItemListSchema(
+  places: { name: string; address: string; schemaType: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Nearby amenities — Pewter Valley Estates",
+    itemListElement: places.map((place, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": place.schemaType,
+        name: place.name,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: place.address,
+          addressLocality: SITE_CONFIG.address.city,
+          addressRegion: SITE_CONFIG.address.stateAbbr,
+          addressCountry: SITE_CONFIG.address.countryCode,
+        },
       },
     })),
   }

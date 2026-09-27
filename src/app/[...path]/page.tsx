@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { AmenityMapSection } from "@/components/AmenityMapSection"
 import { CalendlyPopupLink } from "@/components/CalendlyWidgets"
 import { JsonLd } from "@/components/JsonLd"
 import { PageViewTracker } from "@/components/PageViewTracker"
 import { RelatedPages } from "@/components/RelatedPages"
+import { AMENITY_MAP_MARKETING_PATHS } from "@/lib/amenities/placement-paths"
 import { allMarketingPathSegments, getMarketingPage, segmentsToKey } from "@/lib/marketing-pages"
 import { buildPageMetadata, DEFAULT_OG_IMAGE_PATH } from "@/lib/metadata"
 import { generateBreadcrumbSchema, generateFAQSchema, generateWebPageSchema } from "@/lib/schema"
@@ -46,6 +48,8 @@ export default async function MarketingCatchAllPage({ params }: Props) {
 
   const pathname = `/${segmentsToKey(path)}`
   const url = `${SITE_CONFIG.url}${pathname}`
+  const pageKey = segmentsToKey(path)
+  const showAmenityMap = AMENITY_MAP_MARKETING_PATHS.has(pageKey)
   const breadcrumbs = [
     { name: "Home", url: SITE_CONFIG.url },
     { name: page.h1, url },
@@ -105,6 +109,7 @@ export default async function MarketingCatchAllPage({ params }: Props) {
               </details>
             ))}
           </section>
+          {showAmenityMap ? <AmenityMapSection variant="compact" /> : null}
           <p className={styles.cta}>
             <a href={`tel:${SITE_CONFIG.phoneTel}`}>Call {SITE_CONFIG.phone}</a>
             {" · "}

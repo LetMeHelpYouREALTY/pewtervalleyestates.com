@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { AmenityMapSection } from "@/components/AmenityMapSection"
 import { GoogleMap } from "@/components/GoogleMap"
 import { JsonLd } from "@/components/JsonLd"
 import { NAPDisplay } from "@/components/NAPDisplay"
@@ -119,6 +120,8 @@ export default function NeighborhoodInsightsPage() {
               </li>
             </ul>
           </section>
+
+          <AmenityMapSection variant="compact" />
 
           <section className={styles.linksSection} aria-label="Map and directions">
             <h2>Map &amp; Directions</h2>
