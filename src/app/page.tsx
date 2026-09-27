@@ -15,7 +15,7 @@ import { SITE_CONFIG } from "@/lib/site-contact"
 import styles from "./page.module.css"
 
 const HOME_TITLE = `Pewter Valley Estates & Silverado Ranch Real Estate | ${SITE_CONFIG.name}`
-const HOME_DESCRIPTION = `Homes for sale and expert representation in Silverado Ranch and Pewter Valley Estates (89183), Henderson & Clark County. MLS-backed search, pricing, and neighborhood context with ${SITE_CONFIG.name}. Call ${SITE_CONFIG.phone}.`
+const HOME_DESCRIPTION = `Browse MLS homes in Pewter Valley Estates & Silverado Ranch (89183), Henderson. Buyer and seller guidance from ${SITE_CONFIG.name}. Call ${SITE_CONFIG.phone}.`
 
 export const metadata: Metadata = buildPageMetadata({
   title: HOME_TITLE,
