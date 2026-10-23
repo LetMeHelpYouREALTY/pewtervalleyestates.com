@@ -71,8 +71,7 @@ export function CTASection() {
             <CalendlyInlineWidget title="Schedule your free consultation" />
             <div className={styles.formFooter}>
               <p>
-                Booking through Calendly connects you directly with {SITE_CONFIG.name} at{" "}
-                {SITE_CONFIG.brokerage.name}.
+                Booking through Calendly connects you directly with {SITE_CONFIG.name}.
               </p>
             </div>
           </div>

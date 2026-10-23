@@ -33,8 +33,6 @@ const aboutLinks = [
 
 const trustItems = [
   "Local Silverado Ranch expertise",
-  "Nevada license S.0197614.LLC",
-  "Berkshire Hathaway HomeServices Nevada Properties",
 ]
 
 const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
@@ -221,8 +219,8 @@ export function Footer() {
               © {year} {SITE_CONFIG.businessName} · Las Vegas &amp; Henderson Real Estate
             </p>
             <p className={styles.footerLegal}>
-              Nevada license {SITE_CONFIG.licenseNumber} · Equal Housing Opportunity ·{" "}
-              {SITE_CONFIG.brokerage.name}
+              Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License
+              S.0197614.LLC · Equal Housing Opportunity
             </p>
           </div>
         </div>
