@@ -224,7 +224,7 @@ export const MARKETING_PAGES: Record<string, MarketingPage> = {
     description: `About Dr. Jan Duffy—Silverado Ranch, Henderson, and Las Vegas Valley real estate, including Pewter Valley Estates. Call ${SITE_CONFIG.phone}.`,
     h1: "About Dr. Jan Duffy",
     paragraphs: [
-      "Dr. Jan Duffy focuses on clear communication, neighborhood-level expertise, and a process that keeps you informed at every step.",
+      "Dr. Jan Duffy, a Top 1% Las Vegas REALTOR®, focuses on clear communication, neighborhood-level expertise, and a process that keeps you informed at every step.",
       "Whether you are buying or selling, you deserve representation that respects your goals and timeline.",
     ],
   },
