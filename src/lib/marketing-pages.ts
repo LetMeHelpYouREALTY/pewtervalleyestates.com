@@ -51,7 +51,7 @@ export const MARKETING_PAGES: Record<string, MarketingPage> = {
     description: `Investment real estate in Las Vegas and Henderson—including Silverado Ranch and resale opportunities near Pewter Valley Estates. Call ${SITE_CONFIG.phone}.`,
     h1: "Investment Properties in Las Vegas & Henderson",
     paragraphs: [
-      "Investors benefit from clear rent comps, HOA constraints, and realistic renovation timelines—especially in established neighborhoods with stable demand drivers.",
+      "Investors benefit from clear rent comps, HOA constraints, and realistic renovation timelines—especially in older neighborhoods with stable demand drivers.",
       "Dr. Jan Duffy can help you compare scenarios and connect you with trusted local vendors when needed. This is not tax or legal advice; consult licensed professionals for those topics.",
       "For Silverado Ranch and nearby 89183 segments, underwriting usually depends on realistic rent assumptions, vacancy expectations, HOA rules, and property condition rather than headline list price alone.",
       "A practical investment review compares hold-as-rental, light-value-add, and long-term appreciation scenarios using conservative assumptions for repair and carrying costs.",
@@ -143,7 +143,7 @@ export const MARKETING_PAGES: Record<string, MarketingPage> = {
     description: `Southwest Las Vegas real estate context—including Silverado Ranch and zip code 89183. Local guidance from Dr. Jan Duffy. Call ${SITE_CONFIG.phone}.`,
     h1: "Southwest Las Vegas Real Estate",
     paragraphs: [
-      "Southwest Las Vegas includes a mix of established neighborhoods, newer pockets, and strong commute access depending on your daily route.",
+      "Southwest Las Vegas includes a mix of older neighborhoods, newer pockets, and strong commute access depending on your daily route.",
       "If you are comparing areas, Dr. Jan Duffy can help you weigh tradeoffs using real listings—not generic market clichés.",
     ],
   },
