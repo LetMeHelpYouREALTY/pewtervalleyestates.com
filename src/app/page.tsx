@@ -35,7 +35,7 @@ const faqData = [
   },
   {
     question: "What types of homes are available in Pewter Valley Estates?",
-    answer: `Pewter Valley Estates features ranch-style, single-story homes built by Richmond American Homes. Homes range from 1,950 to 2,240 square feet with 3-4 bedrooms. All homes feature modern floor plans, energy-efficient designs, and are situated on well-maintained lots in a quiet, family-friendly environment.`,
+    answer: `Pewter Valley Estates features ranch-style, single-story homes built by Richmond American Homes. Homes range from 1,950 to 2,240 square feet with 3-4 bedrooms. All homes feature modern floor plans, energy-efficient designs, and are situated on well-maintained lots in a quiet, parks and community amenities.`,
   },
   {
     question: "Where is Pewter Valley Estates located?",
