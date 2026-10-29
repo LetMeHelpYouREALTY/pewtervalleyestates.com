@@ -13,6 +13,7 @@ import {
 import { SITE_CONFIG } from "@/lib/site-contact"
 import { Providers } from "./providers"
 import "./globals.css"
+import WidgetTracker from './widget-tracker'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
@@ -106,6 +107,7 @@ gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true });
           <main id="main-content">{children}</main>
           <Footer />
         </Providers>
+        <WidgetTracker />
       </body>
     </html>
   )
