@@ -128,7 +128,7 @@ export function PalmsListingCard() {
       {/* CTA row */}
       <div style={{ display: "flex", flexWrap: "wrap" as const, gap: "12px", alignItems: "center" }}>
         <a
-          href="tel:702-222-1964"
+          href="tel:702-500-1955"
           style={{
             background: "#C9A84C",
             color: "#0A2440",
@@ -141,7 +141,7 @@ export function PalmsListingCard() {
             letterSpacing: "0.02em",
           }}
         >
-          📞 Call/Text 702-222-1964
+          📞 Call/Text 702-500-1955
         </a>
         <a
           href="https://www.luxevegasliving.com/idx/4381-w-flamingo-rd-las-vegas-nv-89103/1801545223_spid/"
